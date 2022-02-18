@@ -1,4 +1,6 @@
 
 - Binary Search
 - two pointers
-- permutation
+- permutation, Combination
+- DFS
+- BFS
