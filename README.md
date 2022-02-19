@@ -14,14 +14,14 @@
 std::vector<bool> visit;
 vector<vector<int>> Graph;
  
-void DFS(const std::vector<std::vector<int>>& Graphe, int Start, std::vector<bool>& Visited)
+void DFS(int Start)
 {
 	std::cout << Start << " ";
-	Visited[Start] = true;
+	visit[Start] = true;
 
 	for (int i = 0; i < Graphe[Start].size(); ++i) {
-		if (Visited[Graph[Start][i]] == false)
-			DFS(Graphe, Graph[Start][i], Visited);
+		if (visit[Graph[Start][i]] == false)
+			DFS(Graph[Start][i]);
 	}
 }
 ```
@@ -32,22 +32,22 @@ void DFS(const std::vector<std::vector<int>>& Graphe, int Start, std::vector<boo
 std::vector<bool> visit;
 vector<vector<int>> Graph;
 
-void BFS(const std::vector<std::vector<int>>& Graph, int Start, std::vector<bool>& Visited)
+void BFS(int Start)
 {
 	std::queue<int> q;
 	q.push(Start);
 
 	while (!q.empty()) {
-		int front = BFSQ.front();
+		int front = q.front();
 		q.pop();
 
-		if (Visited[front] == false) {
+		if (visit[front] == false) {
 			std::cout << front << " ";
-			Visited[front] = true;
+			visit[front] = true;
 		}
 
 		for (int i = 0; i < Graph[front].size(); ++i) {
-			if (Visited[Graph[front][i]] == false)
+			if (visit[Graph[front][i]] == false)
 				q.push(Graph[front][i]);
 		}
 	}
