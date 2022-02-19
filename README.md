@@ -10,6 +10,7 @@
 
 - DFS
 ```cpp
+// Graph에 연결 노드 번호가 들어있음.
 std::vector<bool> visit;
 vector<vector<int>> Graph;
  
@@ -27,6 +28,7 @@ void DFS(const std::vector<std::vector<int>>& Graphe, int Start, std::vector<boo
 
 - BFS
 ```cpp
+// Graph에 연결 노드 번호가 들어있음.
 std::vector<bool> visit;
 vector<vector<int>> Graph;
 
