@@ -12,8 +12,7 @@ string solution(vector<string> participant, vector<string> completion) {
     
     for (int i = 0; i < max_size; ++i) {
         if (participant[i] != completion[i]) {
-            if (participant.size() > completion.size())
-                answer = participant[i];
+            answer = participant[i];
             break;
         }
     }
