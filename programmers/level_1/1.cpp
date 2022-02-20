@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-
 using namespace std;
 
 // 1. 정렬 비교.
