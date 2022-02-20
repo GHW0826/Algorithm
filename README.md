@@ -1,6 +1,11 @@
 
 - Binary Search
 
+- Recursion
+
+
+- DP(Dynamic programming)
+
 
 - two pointers
 
@@ -54,3 +59,5 @@ void BFS(int Start)
 
 }
 ```
+
+- Backtracking
