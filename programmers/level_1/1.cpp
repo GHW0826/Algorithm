@@ -14,8 +14,6 @@ string solution(vector<string> participant, vector<string> completion) {
         if (participant[i] != completion[i]) {
             if (participant.size() > completion.size())
                 answer = participant[i];
-            else
-                answer = completion[i];
             break;
         }
     }
