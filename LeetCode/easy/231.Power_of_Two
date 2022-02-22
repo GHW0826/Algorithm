@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        bool answer = false;
+        while (n > 0) {
+            if (n % 2 == 1) {
+                if (answer == true)
+                    return false;
+                answer = true;   
+            }
+            n >>= 1;
+        }
+        
+        return answer;
+    }
+};
