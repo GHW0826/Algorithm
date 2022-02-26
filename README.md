@@ -11,7 +11,7 @@
 
 
 - permutation, Combination
-  - permutation
+  - permutation (정렬된 상태에서 가능)
 ```cpp
     vector<int> arr;	// 주어진 arr
     vector<int> perm;	// per 만드는 진행중 보관할 컨테이너
