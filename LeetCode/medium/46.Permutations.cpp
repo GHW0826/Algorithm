@@ -27,18 +27,18 @@ public:
     	if (per.size() == n) {
             answer.emplace_back(per);
 	        return;
-      }
+      	}
         
-	    for (int i = 0; i < nums.size(); ++i) {
-	        if (visit[i] == false) {
-	    	    visit[i] = true;
-		        per.push_back(nums[i]);
-		        permutation(nums);
-		        per.pop_back();
-		        visit[i] = false;
+	for (int i = 0; i < nums.size(); ++i) {
+	    if (visit[i] == false) {
+	    	visit[i] = true;
+		per.push_back(nums[i]);
+		permutation(nums);
+		per.pop_back();
+		visit[i] = false;
             }
-	    }
-	}
+	 }
+    }
 
     vector<vector<int>> permute(vector<int>& nums) {
         sort(nums.begin(), nums.end());
