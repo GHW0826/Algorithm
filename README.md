@@ -13,17 +13,20 @@
 - permutation, Combination
   - permutation
 ```cpp
-    vector<int> answer;
-    void permutation(int n)
+    vector<int> arr;	// 주어진 arr
+    vector<int> perm;	// per 만드는 진행중 보관할 컨테이너
+    vector<bool> visit;	// 
+    int r;		// nPr;
+    void permutation()
     {
-    	if (answer.size() == n)
+    	if (answer.size() == r)
 	    return;
 	for (int i = 0; i < arr.size(); ++i) {
 	    if (visit[i] == false) {
 	    	visit[i] = true;
-		answer.push_back(arr[i]);
-		permutation(n);
-		answer.pop_back();
+		perm.push_back(arr[i]);
+		permutation();
+		perm.pop_back();
 		visit[i] = false;
 	    }
 	}
