@@ -63,3 +63,4 @@ void BFS(int Start)
 - Backtracking
 - B-Tree
 - B+Tree
+- Trie
