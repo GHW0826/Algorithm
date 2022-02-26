@@ -11,7 +11,24 @@
 
 
 - permutation, Combination
-
+  - permutation
+```cpp
+    vector<int> answer;
+    void permutation(int n)
+    {
+    	if (answer.size() == n)
+	    return;
+	for (int i = 0; i < arr.size(); ++i) {
+	    if (visit[i] == false) {
+	    	visit[i] = true;
+		answer.push_back(arr[i]);
+		permutation(n);
+		answer.pop_back();
+		visit[i] = false;
+	    }
+	}
+    }
+```
 
 - DFS
 ```cpp
