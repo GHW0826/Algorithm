@@ -22,6 +22,8 @@ public:
                 sum_ -= candidates[i];
                 nums_.pop_back();
             }
+            else
+                return;
         }
     }
     
