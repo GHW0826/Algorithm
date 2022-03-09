@@ -81,3 +81,7 @@ void BFS(int Start)
 ```
 
 - Backtracking
+- KMP 문자열 탐색
+- Dijkstra 
+- Bellman-Ford-Moore
+- Floyd-Warshall 
