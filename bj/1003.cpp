@@ -45,4 +45,4 @@ int main()
         cout << dp[it][0] << " " << dp[it][1] << endl;
 
     return 0;
-}
+} 
