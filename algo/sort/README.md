@@ -10,3 +10,13 @@ void Bubble(vector<int>& arr)
                 swap(arr[j], arr[j + 1]);
 }
 ```
+
+## cocktail sort</br>
+## selection sort</br>
+## double selection sort</br>
+## insertion sort</br>
+## binary insertion sort</br>
+## merge sort</br>
+## heap sort</br>
+## quick sort</br>
+## shell sort</br>
