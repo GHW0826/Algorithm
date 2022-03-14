@@ -20,11 +20,12 @@ void Selection(vector<int>& arr)
     int size = arr.size();
     for (int i = 0; i < size - 1; ++i) {
         int min = INT_MAX, idx = -1;
-        for (int j = i; j < size; ++j)
+        for (int j = i; j < size; ++j) {
             if (arr[j] < min) {
                 min = arr[j];
                 idx = j;
             }
+        }
         swap(arr[i], arr[idx]);
     }
 }
