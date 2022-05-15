@@ -11,7 +11,7 @@ int main()
 
 	int size = 0;
 	int exam_size = 0;
-    scanf("%d %d", &size, &exam_size);
+    	scanf("%d %d", &size, &exam_size);
 
 	int sum = 0;
 	vector<long> acc(size + 1, 0);
