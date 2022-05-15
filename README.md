@@ -9,6 +9,8 @@
 
 - two pointers
 
+- 세그먼트 트리
+- 펜웍 
 
 - permutation, Combination
   - permutation (정렬된 상태에서 가능)
