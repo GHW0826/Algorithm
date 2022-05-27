@@ -1,3 +1,44 @@
+  - 1874
+```cpp
+#include<iostream>
+#include<vector>
+#include <string>
+using namespace std;
+
+int main()
+{	
+    int n ;
+	cin >> n;
+    
+    vector<int> arr;
+	for (int i = 0; i < n; i++) 
+        cin >> arr[i]; 
+    
+    int cnt = 0;
+    vector<int> v;
+    vector<string> answer;
+	for (int i = 1; i <= n; i++) {
+		v.push_back(i);
+		ans.push_back("+");
+
+		while (!v.empty() && v.back() == arr[cnt]) {
+			v.pop_back();
+			answer.push_back("-");
+			cnt++;
+		}
+	}
+
+	if (v.empty() == false) {
+        cout << "NO";
+        return 0;
+    }
+    
+    for (const auto& it : answer)
+        cout << it << "\n";
+    return 0;
+}
+```
+
   - 17298
 ```cpp
 #include<iostream>
