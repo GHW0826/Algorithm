@@ -1,3 +1,36 @@
+  - 12891
+```cpp
+#include<iostream>
+#include<algorithm>
+#include<stack>
+using namespace std;
+
+int main() {
+    int N;
+	cin >> N;
+    
+    vector<int> arr.resize(N, 0);
+	for (int i = 0; i < N; i++)
+		cin >> arr[i];
+	
+    stack<int> s;
+    vector<int> answer.resize(N, -1);
+	for (int i = N - 1; i >= 0; i--) {
+		while (!s.empty() && s.top() <= arr[i])
+			s.pop();
+        
+		if (s.empty() == false)
+            ans[i] = s.top();
+
+		s.push(arr[i]);
+	}
+	
+    for (const auto& it : answer)
+        cout << it << " ";
+    return 0;
+}
+```
+
   - 11003
 ```cpp
 #include <iostream>
