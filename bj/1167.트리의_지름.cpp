@@ -43,6 +43,9 @@ int main()
         }
     }
 
+    // 0번투 시작점 다돌리면 시간 초과.
+    // 무작위 점 하나에서 가장 먼 노드를 찾는다.
+    // 그곳에서 가장 먼 거리가 트리의 지름.
     vector<bool> visit(node, false);
     dfs(map, visit, 0, 0);
 
