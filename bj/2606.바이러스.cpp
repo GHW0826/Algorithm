@@ -1,18 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <set>
 using namespace std;
 
 vector<bool> visit;
-vector<vector<int>> graph;
+vector<set<int>> graph;
 int answer = -1;
 
 void dfs(int start)
 {
     ++answer;
     visit[start] = true;
-    for (int i = 0; i < graph[start].size(); ++i)
-        if (visit[graph[start][i]] == false)
-            dfs(graph[start][i]);
+    for (auto& it : graph[start])
+        if (visit[it] == false)
+            dfs(it);
 }
 
 int main()
@@ -26,11 +27,11 @@ int main()
 
     int computer1, computer2;
     visit.resize(computer + 1, false);
-    graph.resize(computer + 1, vector<int>());
+    graph.resize(computer + 1, set<int>());
     for (int i = 0; i < line; ++i) {
         cin >> computer1 >> computer2;
-        graph[computer1].push_back(computer2);
-        graph[computer2].push_back(computer1);
+        graph[computer1].insert(computer2);
+        graph[computer2].insert(computer1);
     }
 
     dfs(1);
