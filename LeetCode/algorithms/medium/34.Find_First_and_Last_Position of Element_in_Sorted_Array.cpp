@@ -20,36 +20,20 @@ public:
         if (nums[mid] != target)
             return { -1, -1 };
 
-        int first = mid, last = mid, first_idx, last_idx;
-        bool bfirst = false, blast = false;
-        while (bfirst == false || blast == false) {
-            if (bfirst == false) {
-                if (nums[first] == target) {
-                    --first;
-                    if (first < 0) {
-                        bfirst = true;
-                        first_idx = 0;
-                    }
-                    else if (nums[first] != target) {
-                        bfirst = true;
-                        first_idx = first + 1;
-                    }
-                }
-            }
-            if (blast == false) {
-                if (nums[last] == target) {
-                    ++last;
-                    if (last >= nums.size()) {
-                        blast = true;
-                        last_idx = nums.size() - 1;
-                    }
-                    else if (nums[last] != target) {
-                        blast = true;
-                        last_idx = last - 1;
-                    }
-                }
-            }
+        int first_idx = mid;
+        while (first_idx > 0) {
+            if (nums[first_idx - 1] != target)
+                break;
+            --first_idx;
         }
+        
+        int last_idx = mid;
+        while (last_idx < nums.size() - 1) {
+            if (nums[last_idx + 1] != target)
+                break;
+            ++last_idx;
+        }
+        
         return { first_idx, last_idx };
     }
 };
