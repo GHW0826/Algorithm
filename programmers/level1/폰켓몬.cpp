@@ -1,11 +1,11 @@
 #include <vector>
-#include <map>
+#include <set>
 using namespace std;
 
 int solution(vector<int> nums) {
-    map<int, int> cnt;
+    set<int> cnt;
     for (int i = 0; i < nums.size(); ++i)
-        ++cnt[nums[i]];
+        cnt.insert(nums[i]);
     
     int sum = 0;
     int answer = 0;
