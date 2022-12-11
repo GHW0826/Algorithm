@@ -32,9 +32,7 @@ int main() {
 
     long long answer = INF;
     for (int i = 1; i <= mapSize; ++i)
-        for (int j = 1; j <= mapSize; ++j)
-            if (i == j)
-                answer = min(answer, map[i][i]);
+        answer = min(answer, map[i][i]);
 
     if (answer == INF)
         answer = -1;
